@@ -1,24 +1,36 @@
-#include<cstdlib>
 #include<iostream>
-#include<conio.h>
-#include<ctime>
-#include<windows.h>
-#include"Game.h"
-#include"Game.cpp"
+#include<string>
+#include"windows.h"
+#include"Menu.h"
+#include"Menu.cpp"
 
+
+
+using namespace std;
+
+char selection;
 int main( )
 {
-    Game a;
-    a.Setup();
+    cout << "please select one \n A: Game \n B: Url searcher \n" << endl;
+    cin >> selection;
 
-    while( !gameOver)
+    Menu a;
+
+    if(selection == 'a')
     {
-    a.Draw( );
-    a.Input( );
-    a.Logic( );
-    a.GameOver();
-    Sleep(10);
+        system("cls");
+        a.rpgGame( );
     }
-    return 0;
+    else if(selection == 'b')
+    {
+        system("cls");
+        a.urlSearcher( );
+    }
+    else
+    {
+        system("cls");
+        cout << "error not an option" << endl;
+    }
+
 
 }
