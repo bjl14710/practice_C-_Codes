@@ -1,14 +1,24 @@
+#include<cstdlib>
 #include<iostream>
-#include"converter.h"
-#include"converter.cpp"
-
-using namespace std;
+#include<conio.h>
+#include<ctime>
+#include<windows.h>
+#include"Game.h"
+#include"Game.cpp"
 
 int main( )
 {
-    Converter a;
+    Game a;
+    a.Setup();
 
-    a.printSelection( );
+    while( !gameOver)
+    {
+    a.Draw( );
     a.Input( );
-    a.Conversion( );
+    a.Logic( );
+    a.GameOver();
+    Sleep(10);
+    }
+    return 0;
+
 }
