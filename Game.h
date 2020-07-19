@@ -16,8 +16,6 @@ public:
     void Logic( );
     void GameOver( );
 
-    // experiment Wednesday at 7AM
-
 private:
 
 
